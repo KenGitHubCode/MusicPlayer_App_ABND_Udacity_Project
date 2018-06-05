@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Project: Music Player Structure
+Developer: Ken Muckey
+Project start date: 6.5.2018
+Project rubric: https://review.udacity.com/#!/rubrics/1134/view
+-->
+<resources>
+    <!-- Primary color of the app (shown in the app bar) -->
+    <color name="primary_color">#4A312A</color>
+
+    <!-- Primary dark color of the app (shown in the status bar) -->
+    <color name="primary_dark_color">#2F1D1A</color>
+
+    <!-- Background color for app -->
+    <color name="tan_background">#FFF7DA</color>
+
+    <!-- Background colors for each category -->
+    <color name="anjuna_beats">#FD8E09</color>
+    <color name="armada">#379237</color>
+    <color name="a_state_of_trance">#8800A0</color>
+    <color name="select_an_option" />
+
+</resources>
