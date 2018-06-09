@@ -9,9 +9,12 @@ Project rubric: https://review.udacity.com/#!/rubrics/1134/view
     <!-- Title for the application. [CHAR LIMIT=12] -->
     <string name="app_name">Music Player Structure Project</string>
 
-    <!-- Record names [CHAR LIMIT=20] -->
-    <string name="anjuna_beats">Anjuna Beats</string>
-    <string name="armada">Armind (Armada)</string>
-    <string name="a_state_of_trance">A State Of Trance</string>
-    <string name="select_an_option">Select one of the below options:</string>
+    <!-- Instruction   -->
+    <string name="select_an_option">Select and artist from record label AnjuanBeats:</string>
+
+    <!-- Artist names [CHAR LIMIT=20] -->
+    <string name="above_and_beyond">Above and Beyond</string>
+    <string name="jason_ross">Jason Ross</string>
+    <string name="arty">Arty</string>
+
 </resources>

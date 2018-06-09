@@ -16,27 +16,27 @@ Project rubric: https://review.udacity.com/#!/rubrics/1134/view
     tools:context="com.example.android.musicplayerstructurep4bykm.MainActivity">
 
     <TextView
-        android:id="@+id/numbers"
+        android:id="@+id/select_option"
         style="@style/HeaderStyle"
         android:background="@color/select_an_option"
         android:text="@string/select_an_option" />
 
     <TextView
-        android:id="@+id/family"
+        android:id="@+id/above_beyond"
         style="@style/CategoryStyle"
-        android:background="@color/anjuna_beats"
-        android:text="@string/anjuna_beats" />
+        android:background="@color/above_and_beyond"
+        android:text="@string/above_and_beyond" />
 
     <TextView
-        android:id="@+id/colors"
+        android:id="@+id/jason_ross"
         style="@style/CategoryStyle"
-        android:background="@color/armada"
-        android:text="@string/armada" />
+        android:background="@color/jason_ross"
+        android:text="@string/jason_ross" />
 
     <TextView
-        android:id="@+id/phrases"
+        android:id="@+id/arty"
         style="@style/CategoryStyle"
-        android:background="@color/a_state_of_trance"
-        android:text="@string/a_state_of_trance" />
+        android:background="@color/arty"
+        android:text="@string/arty" />
 
 </LinearLayout>

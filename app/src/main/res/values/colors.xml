@@ -16,9 +16,9 @@ Project rubric: https://review.udacity.com/#!/rubrics/1134/view
     <color name="tan_background">#FFF7DA</color>
 
     <!-- Background colors for each category -->
-    <color name="anjuna_beats">#FD8E09</color>
-    <color name="armada">#379237</color>
-    <color name="a_state_of_trance">#8800A0</color>
+    <color name="above_and_beyond">#4A312A</color>
+    <color name="jason_ross">#379237</color>
+    <color name="arty">#8800A0</color>
     <color name="select_an_option" />
 
 </resources>
