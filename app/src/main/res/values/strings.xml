@@ -14,7 +14,6 @@ Project rubric: https://review.udacity.com/#!/rubrics/1134/view
 
     <!-- Artist names [CHAR LIMIT=20] -->
     <string name="above_and_beyond">Above and Beyond</string>
-    <string name="jason_ross">Jason Ross</string>
-    <string name="arty">Arty</string>
+    <string name="ilan_bluestone">Ilan Bluestone</string>
 
 </resources>

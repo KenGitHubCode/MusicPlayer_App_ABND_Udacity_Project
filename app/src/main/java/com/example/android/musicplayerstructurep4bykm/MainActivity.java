@@ -37,22 +37,27 @@ public class MainActivity extends AppCompatActivity {
         });
         // -----------------END REPEATABLE CODE SECTION PER NUMBER OF OPTIONS
 
-        /* delete comment block
-        // Find the View that shows the family category
-        TextView family = (TextView) findViewById(R.id.family);
-
+        // ------------------REPEATABLE CODE SECTION PER NUMBER OF OPTIONS
+        /* The below section performs the following fuctions:
+            1. Finds the applicable text view and sets the onclick listener
+            2. overrides onClick for the view to EXPLICIT intent from Main Activity Class to applicable class
+            3. Starts Intent
+         */
+        // Find the View that shows the applicable category
+        TextView ilanBluestoneTextView = (TextView) findViewById(R.id.ilan_bluestone);
         // Set a click listener on that View
-        family.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the family category is clicked on.
+        ilanBluestoneTextView.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the applicable category is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link FamilyActivity}
-                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
-
+                // Create a new intent to open the {@link applicable activity}
+                Intent ilanBluestoneIntent = new Intent(MainActivity.this, IlanBluestone.class);
                 // Start the new activity
-                startActivity(familyIntent);
+                startActivity(ilanBluestoneIntent);
             }
-        }); */
+        });
+        // -----------------END REPEATABLE CODE SECTION PER NUMBER OF OPTIONS
+
 
 
     }

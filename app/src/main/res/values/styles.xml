@@ -30,7 +30,7 @@ Project rubric: https://review.udacity.com/#!/rubrics/1134/view
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">#FFFFFF</item>
-
+        <item name="android:gravity">center</item>
     </style>
 
     // List Item Style for Title (bold text)
@@ -40,6 +40,7 @@ Project rubric: https://review.udacity.com/#!/rubrics/1134/view
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
 
     </style>
 

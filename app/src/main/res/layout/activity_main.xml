@@ -28,15 +28,11 @@ Project rubric: https://review.udacity.com/#!/rubrics/1134/view
         android:text="@string/above_and_beyond" />
 
     <TextView
-        android:id="@+id/jason_ross"
+        android:id="@+id/ilan_bluestone"
         style="@style/CategoryStyle"
-        android:background="@color/jason_ross"
-        android:text="@string/jason_ross" />
+        android:background="@color/ilan_bluestone"
+        android:text="@string/ilan_bluestone" />
 
-    <TextView
-        android:id="@+id/arty"
-        style="@style/CategoryStyle"
-        android:background="@color/arty"
-        android:text="@string/arty" />
+
 
 </LinearLayout>
