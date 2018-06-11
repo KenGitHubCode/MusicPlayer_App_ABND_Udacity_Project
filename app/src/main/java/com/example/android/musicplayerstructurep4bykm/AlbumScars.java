@@ -1,8 +1,11 @@
 package com.example.android.musicplayerstructurep4bykm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -19,6 +22,62 @@ public class AlbumScars extends AppCompatActivity {
 
         //Setting the content view to the matching XML file created
         setContentView(R.layout.activity_album_scars);
+
+        //------------Listener block below--------------------------------------------------------------
+                /* The below section sets onsetOnItemClickListener, steps:
+            1. Finds the applicable text view and sets the onclick listener
+            2. overrides onClick for the view to EXPLICIT intentto applicable class
+            3. Starts Intent
+         */
+        // Find the View that shows the applicable category
+        final ListView myListView = (ListView) findViewById(R.id.list);
+
+        // Set a click listener on that View
+        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                //TEST code that can be deleted.  Keep for now as it may be needed for songs...
+                /* Object listItem = myListView.getSelectedItemPosition();
+                Toast.makeText(getApplicationContext(), "selected Item Name is "+listItem.toString() + " postion " + i, Toast.LENGTH_LONG).show();
+                */
+
+                //Creating a Class variable to hold the destination activity depending on Switch below
+                Class myActivityToIntent = PlaySong.class;
+
+                // Create a new intent to open the {@link applicable activity}
+                Intent myIntent = new Intent(getApplicationContext(), myActivityToIntent);
+
+                //Switch based on position in ListView, hardcoded based on ArrayList addition order
+                //e.g. first added to Tunes instance was "Common Ground" so position 0 leads to AlbumCommonGround.class
+                switch (i) {
+                    case 0:
+                        //myActivityToIntent = PlaySong.class;
+                        myIntent.putExtra("myTitle", "Case 000");
+                        myIntent.putExtra("mySubTitle", "Case 000 sub");
+                        //myActivityToIntent = new PlaySong("asdf","ewfwef");
+                        break;
+                    case 1:
+                        myIntent.putExtra("myTitle", "Case 1");
+                        myIntent.putExtra("mySubTitle", "Case 1 sub");
+                        //myActivityToIntent = PlaySong.class;
+                        break;
+                    case 2:
+                        myIntent.putExtra("myTitle", "Case 2");
+                        myIntent.putExtra("mySubTitle", "Case 2 sub");
+                        //myActivityToIntent = PlaySong.class;
+                        break;
+                    default:
+                        myIntent.putExtra("myTitle", "Case default");
+                        myIntent.putExtra("mySubTitle", "Case default sub");
+                        //myActivityToIntent = PlaySong.class;
+                }
+
+                // Start the new activity
+                startActivity(myIntent);
+            }
+        });
+        //------------------------------end listener block-------------------------------------------------------------
 
         // tunes ArrayList initialize, using ArrayList for variable size array
         ArrayList<Tune> tunes = new ArrayList<Tune>();
