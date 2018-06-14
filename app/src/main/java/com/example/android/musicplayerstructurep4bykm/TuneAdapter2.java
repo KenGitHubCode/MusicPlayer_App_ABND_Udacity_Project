@@ -15,22 +15,22 @@ import java.util.ArrayList;
  * Created by redne on 6/7/2018.
  */
 
-public class SongAdapter extends ArrayAdapter<Song> {
+public class TuneAdapter2 extends ArrayAdapter<Tune> {
 
     //set class-global variables
-    private static final String LOG_TAG = SongAdapter.class.getSimpleName();
+    private static final String LOG_TAG = TuneAdapter2.class.getSimpleName();
     private int viewBGColor;
 
     /**
      * @param context The current context. Used to inflate the layout file.
-     * @param Songs   A List of Song objects to display in a list
+     * @param Tunes   A List of Tune objects to display in a list
      */
-    public SongAdapter(Activity context, ArrayList<Song> Songs, int myBGColor) {
+    public TuneAdapter2(Activity context, ArrayList<Tune> Tunes, int myBGColor) {
         // Initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
-        super(context, 0, Songs);
+        super(context, 0, Tunes);
         viewBGColor = myBGColor;
     }
 
@@ -48,34 +48,34 @@ public class SongAdapter extends ArrayAdapter<Song> {
 
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item, parent, false);
+                    R.layout.player_list_item, parent, false);
         }
 
 
 
-        // Get the {@link Song} object located at this position in the list
-        Song currentSong = getItem(position);
+        // Get the {@link Tune} object located at this position in the list
+        Tune currentTune = getItem(position);
 
-        /*  Title Song ***********************************/
+        /*  Title Tune ***********************************/
         // Find the TextView in the list_item.xml layout with the ID version_name
-        TextView titleTextView = (TextView) listItemView.findViewById(R.id.listItemTitle);
-        // Get the version name from the current Song object and set this text on the name TextView
-        titleTextView.setText(currentSong.getSongTitle());
+        TextView titleTextView = (TextView) listItemView.findViewById(R.id.player_list_item_title);
+        // Get the version name from the current Tune object and set this text on the name TextView
+        titleTextView.setText(currentTune.getTuneTitle());
 
 
-        /* SUB Title Song ***********************************/
+        /* SUB Title Tune ***********************************/
         // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView subtitleTextView = (TextView) listItemView.findViewById(R.id.listItemSubTitle);
-        // Get the version number from the current Song object and set this text on the number TextView
-        subtitleTextView.setText(currentSong.getSongSubTitle());
+        TextView subtitleTextView = (TextView) listItemView.findViewById(R.id.player_list_item_subtitle);
+        // Get the version number from the current Tune object and set this text on the number TextView
+        subtitleTextView.setText(currentTune.getTuneSubTitle());
 
 
         /* IMAGE FOR ITEM ***********************************/
         // Find the imageview in list_item.xml
         ImageView myImageView = (ImageView) listItemView.findViewById(R.id.myImage);
-        if (currentSong.hasImage()) {
+        if (currentTune.hasImage()) {
             // Get the image resource and set it to the image view
-            myImageView.setImageResource(currentSong.getItemImage());
+            myImageView.setImageResource(currentTune.getItemImage());
         } else {
             //if there is no valid image ID
             myImageView.setVisibility(View.GONE);

@@ -24,8 +24,7 @@ public class PlaySong extends AppCompatActivity  {
         //Setting the content view to the matching XML file created
         setContentView(R.layout.activity_play_song);
 
-        Toast toast = Toast.makeText(this, "PlaySong class called here", Toast.LENGTH_LONG);
-        toast.show();
+
 
         String newString;
         String newStringForSub;
@@ -42,7 +41,9 @@ public class PlaySong extends AppCompatActivity  {
             newString= (String) savedInstanceState.getSerializable("STRING_I_NEED");
             newStringForSub= (String) savedInstanceState.getSerializable("STRING_I_NEED");
         }
-
+        Toast toast = Toast.makeText(this, "PlaySong class called here and Title value is: "
+                + newString, Toast.LENGTH_LONG);
+        toast.show();
 
         // tunes ArrayList initialize, using ArrayList for variable size array
         ArrayList<Tune> tunes = new ArrayList<Tune>();
@@ -51,17 +52,17 @@ public class PlaySong extends AppCompatActivity  {
         tunes.add(new Tune(newString,newStringForSub, R.drawable.scars));
 
         //initialize itemsAdapter using tunes ArrayList
-        TuneAdapter itemsAdapter = new TuneAdapter (this, tunes, R.color.above_and_beyond);
+        TuneAdapter2 itemsAdapter = new TuneAdapter2 (this, tunes, R.color.above_and_beyond);
 
         //Initialize listView as the list View from the applicable xml file
-        ListView mylistView = (ListView) findViewById(R.id.play_item_list);
+        ListView mylistView = (ListView) findViewById(R.id.play_song_list);
 
         //set the adapter for listView (which is "list" view in the applicable xml) to itemsView using tunes
         mylistView.setAdapter(itemsAdapter);
 
         //LOGCAT Loop for values recording
         for(int index = 0; index < tunes.size(); index++){
-            Log.v("PlaySong ","Value at index " + index + ": " + tunes.get(index));
+            Log.v("PlaySong: ","Value at index " + index + ": " + tunes.get(index));
         }
 
     }

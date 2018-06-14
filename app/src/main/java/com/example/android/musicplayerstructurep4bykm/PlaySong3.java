@@ -35,8 +35,8 @@ public class PlaySong3 extends AppCompatActivity  {
             newStringForSub= (String) savedInstanceState.getSerializable("STRING_I_NEED");
         }
 
-        TextView myTitle = findViewById(R.id.playerlistItemTitle2);
-        TextView mySubTitle = findViewById(R.id.listItemSubTitle2);
+        TextView myTitle = findViewById(R.id.player_list_item_title);
+        TextView mySubTitle = findViewById(R.id.player_list_item_subtitle);
 
         myTitle.setText(newString);
         mySubTitle.setText(newStringForSub);

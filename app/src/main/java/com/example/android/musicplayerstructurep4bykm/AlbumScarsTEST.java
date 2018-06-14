@@ -32,7 +32,7 @@ public class AlbumScarsTEST extends AppCompatActivity {
             3. Starts Intent
          */
         // Find the View that shows the applicable category
-        final ListView myListView = (ListView) findViewById(R.id.play_item_list);
+        final ListView myListView = (ListView) findViewById(R.id.play_song_list);
 
         // Set a click listener on that View
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
