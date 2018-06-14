@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * Created by redne on 6/7/2018.
  */
 
-public class AlbumScars extends AppCompatActivity {
+public class AlbumScarsTEST extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +32,10 @@ public class AlbumScars extends AppCompatActivity {
             3. Starts Intent
          */
         // Find the View that shows the applicable category
-        final ListView myCurrentListView = (ListView) findViewById(R.id.list);
+        final ListView myListView = (ListView) findViewById(R.id.play_item_list);
 
         // Set a click listener on that View
-        myCurrentListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 

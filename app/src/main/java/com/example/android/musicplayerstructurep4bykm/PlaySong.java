@@ -3,7 +3,9 @@ package com.example.android.musicplayerstructurep4bykm;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -13,13 +15,6 @@ import java.util.ArrayList;
 
 public class PlaySong extends AppCompatActivity  {
 
-    /*private String myTitle;
-    private String mySubTitle;
-    //two constructors
-    public  PlaySong (String myString, String mySubString){
-        myTitle = myString;
-        mySubTitle = mySubString;
-    }*/
 
 
     @Override
@@ -28,6 +23,9 @@ public class PlaySong extends AppCompatActivity  {
 
         //Setting the content view to the matching XML file created
         setContentView(R.layout.activity_play_song);
+
+        Toast toast = Toast.makeText(this, "PlaySong class called here", Toast.LENGTH_LONG);
+        toast.show();
 
         String newString;
         String newStringForSub;
@@ -38,7 +36,7 @@ public class PlaySong extends AppCompatActivity  {
                 newStringForSub= null;
             } else {
                 newString= extras.getString("myTitle");
-                newStringForSub= extras.getString("myTitle");
+                newStringForSub= extras.getString("mySubTitle");
             }
         } else {
             newString= (String) savedInstanceState.getSerializable("STRING_I_NEED");
@@ -56,22 +54,16 @@ public class PlaySong extends AppCompatActivity  {
         TuneAdapter itemsAdapter = new TuneAdapter (this, tunes, R.color.above_and_beyond);
 
         //Initialize listView as the list View from the applicable xml file
-        ListView mylistView = (ListView) findViewById(R.id.list);
+        ListView mylistView = (ListView) findViewById(R.id.play_item_list);
 
         //set the adapter for listView (which is "list" view in the applicable xml) to itemsView using tunes
         mylistView.setAdapter(itemsAdapter);
 
         //LOGCAT Loop for values recording
         for(int index = 0; index < tunes.size(); index++){
-            Log.v("NumbersActivity","Value at index " + index + ": " + tunes.get(index));
+            Log.v("PlaySong ","Value at index " + index + ": " + tunes.get(index));
         }
 
     }
 
-   /* public void setTitle (String i){
-        myTitle = i;
-    }
-    public void setSubTitle (String i){
-        mySubTitle = i;
-    }*/
 }

@@ -21,7 +21,7 @@
         android:src="@mipmap/ic_launcher" />
 
     <LinearLayout
-        android:id="@+id/tunesLayout"
+        android:id="@+id/tunesplayerlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/primary_color"
@@ -33,12 +33,12 @@
         android:paddingRight="@dimen/activity_horizontal_margin">
 
         <TextView
-            android:id="@+id/listItemTitle"
+            android:id="@+id/playerlistItemTitle2"
             style="@style/ListStyleB"
             tools:text="Title Sample" />
 
         <TextView
-            android:id="@+id/listItemSubTitle"
+            android:id="@+id/listItemSubTitle2"
             style="@style/ListStyle"
             android:text="Sub Title Sample" />
     </LinearLayout>

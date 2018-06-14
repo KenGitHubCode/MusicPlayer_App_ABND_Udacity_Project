@@ -85,6 +85,29 @@
 
         //activities DECLARED here per each customer explicit class created:
         <activity
+            android:name=".AlbumScars2"
+            android:label="@string/ilan_bluestone"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        //activities DECLARED here per each customer explicit class created:
+        <activity
+            android:name=".AlbumScarsTEST"
+            android:label="@string/ilan_bluestone"
+            android:parentActivityName=".MainActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+
+        //activities DECLARED here per each customer explicit class created:
+        <activity
             android:name=".PlaySong"
             android:label="@string/above_and_beyond"
             android:parentActivityName=".PlaySong">
