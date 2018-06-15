@@ -81,17 +81,14 @@ public class TuneAdapter extends ArrayAdapter<Tune> {
             myImageView.setVisibility(View.GONE);
         }
 
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
-        // so that it can be shown in the ListView
-
-
-        //background
+        /* BACKGROUND FOR ITEM ***********************************/
         View textContainer = listItemView.findViewById(R.id.tunesLayout);
         //find the value of the color through below single line
         int color = ContextCompat.getColor(getContext(), viewBGColor);
         textContainer.setBackgroundColor(color);
 
-
+        // Return the whole list item layout (containing 2 TextViews and an ImageView)
+        // so that it can be shown in the ListView
         return listItemView;
     }
 }

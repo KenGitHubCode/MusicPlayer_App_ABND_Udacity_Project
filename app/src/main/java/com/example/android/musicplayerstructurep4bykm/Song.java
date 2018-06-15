@@ -5,7 +5,8 @@ package com.example.android.musicplayerstructurep4bykm;
  */
 
 /**
- * {@link Song} Class to handle "Song" which can be songs or albums.  Provides contructors and get / set methods
+ * {@link Song} Class to handle "Song" which can only be songs as it links to the xml to play a song.
+ * Provides contructors and get / set methods
  * Song holds two variables that can be Album/Song or Artist/Album.  To be of use to both situations,
  *  the variable names Title and SubTitle were used.
  * A third variable is the image, this will only be used for the albums at this time
@@ -49,7 +50,7 @@ public class Song {
     }
     //get image
     public int getItemImage(){return imageResourceID; }
-
+    //checks if there is an image passed in or not
     public boolean hasImage() {
         if (imageResourceID == -1)
             return false;

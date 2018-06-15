@@ -10,7 +10,7 @@ Project rubric: https://review.udacity.com/#!/rubrics/1134/view
     <string name="app_name">Music Player Structure Project</string>
 
     <!-- Instruction   -->
-    <string name="select_an_option">Select and artist from record label AnjuanBeats:</string>
+    <string name="select_an_option">Select an Anjuna Label Artist:</string>
 
     <!-- Artist names [CHAR LIMIT=20] -->
     <string name="above_and_beyond">Above and Beyond</string>

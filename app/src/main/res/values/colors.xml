@@ -14,6 +14,7 @@ Project rubric: https://review.udacity.com/#!/rubrics/1134/view
 
     <!-- Background color for app -->
     <color name="tan_background">#FFF7DA</color>
+    <color name="black_background">#000000</color>
 
     <!-- Background colors for each category -->
     <color name="above_and_beyond">#4A312A</color>
