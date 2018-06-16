@@ -51,28 +51,26 @@ public class SongAdapter extends ArrayAdapter<Tune> {
                     R.layout.player_list_item, parent, false);
         }
 
-
-
         // Get the {@link Tune} object located at this position in the list
         Tune currentTune = getItem(position);
 
         /*  Title Tune ***********************************/
         // Find the TextView in the list_item.xml layout with the ID version_name
-        TextView titleTextView = (TextView) listItemView.findViewById(R.id.player_list_item_title);
+        TextView titleTextView = listItemView.findViewById(R.id.player_list_item_title);
         // Get the version name from the current Tune object and set this text on the name TextView
         titleTextView.setText(currentTune.getTuneTitle());
 
 
         /* SUB Title Tune ***********************************/
         // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView subtitleTextView = (TextView) listItemView.findViewById(R.id.player_list_item_subtitle);
+        TextView subtitleTextView = listItemView.findViewById(R.id.player_list_item_subtitle);
         // Get the version number from the current Tune object and set this text on the number TextView
         subtitleTextView.setText(currentTune.getTuneSubTitle());
 
 
         /* IMAGE FOR ITEM ***********************************/
         // Find the imageview in list_item.xml
-        ImageView myImageView = (ImageView) listItemView.findViewById(R.id.myImage);
+        ImageView myImageView = listItemView.findViewById(R.id.myImage);
         if (currentTune.hasImage()) {
             // Get the image resource and set it to the image view
             myImageView.setImageResource(currentTune.getItemImage());
@@ -81,17 +79,14 @@ public class SongAdapter extends ArrayAdapter<Tune> {
             myImageView.setVisibility(View.GONE);
         }
 
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
-        // so that it can be shown in the ListView
-
-
         //background
         View textContainer = listItemView.findViewById(R.id.tunes_player_layout);
         //find the value of the color through below single line
         int color = ContextCompat.getColor(getContext(), viewBGColor);
         textContainer.setBackgroundColor(color);
 
-
+        // Return the whole list item layout (containing 2 TextViews and an ImageView)
+        // so that it can be shown in the ListView
         return listItemView;
     }
 }

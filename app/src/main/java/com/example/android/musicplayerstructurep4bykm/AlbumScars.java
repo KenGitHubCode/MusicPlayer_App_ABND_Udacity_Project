@@ -24,7 +24,7 @@ public class AlbumScars extends AppCompatActivity {
         setContentView(R.layout.activity_album_scars);
 
         // Find the View that shows the applicable category
-        final ListView myCurrentListView = (ListView) findViewById(R.id.list);
+        final ListView myCurrentListView = findViewById(R.id.list);
 
         // tunes ArrayList initialize, using ArrayList for variable size array
         final ArrayList<Tune> tunes = new ArrayList<Tune>();
@@ -44,7 +44,7 @@ public class AlbumScars extends AppCompatActivity {
         TuneAdapter itemsAdapter = new TuneAdapter (this, tunes, R.color.above_and_beyond);
 
         //Initialize listView as the list View from the applicable xml file
-        ListView mylistView = (ListView) findViewById(R.id.list);
+        ListView mylistView = findViewById(R.id.list);
 
         //set the adapter for listView (which is "list" view in the applicable xml) to itemsView using tunes
         mylistView.setAdapter(itemsAdapter);
@@ -69,49 +69,49 @@ public class AlbumScars extends AppCompatActivity {
                 //e.g. first added to Tunes instance was "Common Ground" so position 0 leads to AlbumCommonGround.class
                 switch (i) {
                     case 0:
-                        myIntent.putExtra("myTitle", tunes.get(0).getTuneTitle());
-                        myIntent.putExtra("mySubTitle", tunes.get(0).getTuneSubTitle());
-                        myIntent.putExtra("myImg", tunes.get(0).getItemImage());
+                        myIntent.putExtra("myTitle", tunes.get(i).getTuneTitle());
+                        myIntent.putExtra("mySubTitle", tunes.get(i).getTuneSubTitle());
+                        myIntent.putExtra("myImg", tunes.get(i).getItemImage());
                         break;
                     case 1:
-                        myIntent.putExtra("myTitle", tunes.get(1).getTuneTitle());
-                        myIntent.putExtra("mySubTitle", tunes.get(1).getTuneSubTitle());
-                        myIntent.putExtra("myImg", tunes.get(1).getItemImage());
+                        myIntent.putExtra("myTitle", tunes.get(i).getTuneTitle());
+                        myIntent.putExtra("mySubTitle", tunes.get(i).getTuneSubTitle());
+                        myIntent.putExtra("myImg", tunes.get(i).getItemImage());
                         break;
                     case 2:
-                        myIntent.putExtra("myTitle", tunes.get(2).getTuneTitle());
-                        myIntent.putExtra("mySubTitle", tunes.get(2).getTuneSubTitle());
-                        myIntent.putExtra("myImg", tunes.get(2).getItemImage());
+                        myIntent.putExtra("myTitle", tunes.get(i).getTuneTitle());
+                        myIntent.putExtra("mySubTitle", tunes.get(i).getTuneSubTitle());
+                        myIntent.putExtra("myImg", tunes.get(i).getItemImage());
                         break;
                     case 3:
-                        myIntent.putExtra("myTitle", tunes.get(3).getTuneTitle());
-                        myIntent.putExtra("mySubTitle", tunes.get(3).getTuneSubTitle());
-                        myIntent.putExtra("myImg", tunes.get(3).getItemImage());
+                        myIntent.putExtra("myTitle", tunes.get(i).getTuneTitle());
+                        myIntent.putExtra("mySubTitle", tunes.get(i).getTuneSubTitle());
+                        myIntent.putExtra("myImg", tunes.get(i).getItemImage());
                         break;
                     case 4:
-                        myIntent.putExtra("myTitle", tunes.get(4).getTuneTitle());
-                        myIntent.putExtra("mySubTitle", tunes.get(4).getTuneSubTitle());
-                        myIntent.putExtra("myImg", tunes.get(4).getItemImage());
+                        myIntent.putExtra("myTitle", tunes.get(i).getTuneTitle());
+                        myIntent.putExtra("mySubTitle", tunes.get(i).getTuneSubTitle());
+                        myIntent.putExtra("myImg", tunes.get(i).getItemImage());
                         break;
                     case 5:
-                        myIntent.putExtra("myTitle", tunes.get(5).getTuneTitle());
-                        myIntent.putExtra("mySubTitle", tunes.get(5).getTuneSubTitle());
-                        myIntent.putExtra("myImg", tunes.get(5).getItemImage());
+                        myIntent.putExtra("myTitle", tunes.get(i).getTuneTitle());
+                        myIntent.putExtra("mySubTitle", tunes.get(i).getTuneSubTitle());
+                        myIntent.putExtra("myImg", tunes.get(i).getItemImage());
                         break;
                     case 6:
-                        myIntent.putExtra("myTitle", tunes.get(6).getTuneTitle());
-                        myIntent.putExtra("mySubTitle", tunes.get(6).getTuneSubTitle());
-                        myIntent.putExtra("myImg", tunes.get(6).getItemImage());
+                        myIntent.putExtra("myTitle", tunes.get(i).getTuneTitle());
+                        myIntent.putExtra("mySubTitle", tunes.get(i).getTuneSubTitle());
+                        myIntent.putExtra("myImg", tunes.get(i).getItemImage());
                         break;
                     case 7:
-                        myIntent.putExtra("myTitle", tunes.get(7).getTuneTitle());
-                        myIntent.putExtra("mySubTitle", tunes.get(7).getTuneSubTitle());
-                        myIntent.putExtra("myImg", tunes.get(7).getItemImage());
+                        myIntent.putExtra("myTitle", tunes.get(i).getTuneTitle());
+                        myIntent.putExtra("mySubTitle", tunes.get(i).getTuneSubTitle());
+                        myIntent.putExtra("myImg", tunes.get(i).getItemImage());
                         break;
                     case 8:
-                        myIntent.putExtra("myTitle", tunes.get(8).getTuneTitle());
-                        myIntent.putExtra("mySubTitle", tunes.get(8).getTuneSubTitle());
-                        myIntent.putExtra("myImg", tunes.get(8).getItemImage());
+                        myIntent.putExtra("myTitle", tunes.get(i).getTuneTitle());
+                        myIntent.putExtra("mySubTitle", tunes.get(i).getTuneSubTitle());
+                        myIntent.putExtra("myImg", tunes.get(i).getItemImage());
                         break;
                     default:
                         myIntent.putExtra("myTitle", "Song is missing.");
@@ -130,11 +130,5 @@ public class AlbumScars extends AppCompatActivity {
         for(int index = 0; index < tunes.size(); index++){
             Log.v("NumbersActivity","Value at index " + index + ": " + tunes.get(index));
         }
-
-        //TEST code that can be deleted.  Keep for now as it may be needed for songs...
-               /*Object listItem = myListView.getSelectedItemPosition();
-                Toast.makeText(getApplicationContext(), "selected Item Name is "+
-                    listItem.toString() + " postion " + i, Toast.LENGTH_LONG).show();*/
-
     }
 }

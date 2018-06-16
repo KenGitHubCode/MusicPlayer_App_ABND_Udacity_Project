@@ -51,10 +51,7 @@ public class Tune {
     public int getItemImage(){return imageResourceID; }
 
     public boolean hasImage() {
-        if (imageResourceID == -1)
-            return false;
-        else
-            return true;
+        return imageResourceID != -1;
     }
 
 }

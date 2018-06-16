@@ -15,15 +15,8 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-
-        // ------------------REPEATABLE CODE SECTION PER NUMBER OF OPTIONS
-        /* The below section performs the following fuctions:
-            1. Finds the applicable text view and sets the onclick listener
-            2. overrides onClick for the view to EXPLICIT intent from Main Activity Class to applicable class
-            3. Starts Intent
-         */
         // Find the View that shows the applicable category
-        TextView aboveBeyondTextView = (TextView) findViewById(R.id.above_beyond);
+        TextView aboveBeyondTextView = findViewById(R.id.above_beyond);
         // Set a click listener on that View
         aboveBeyondTextView.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the applicable category is clicked on.
@@ -44,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             3. Starts Intent
          */
         // Find the View that shows the applicable category
-        TextView ilanBluestoneTextView = (TextView) findViewById(R.id.ilan_bluestone);
+        TextView ilanBluestoneTextView = findViewById(R.id.ilan_bluestone);
         // Set a click listener on that View
         ilanBluestoneTextView.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the applicable category is clicked on.

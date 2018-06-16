@@ -51,28 +51,26 @@ public class TuneAdapter extends ArrayAdapter<Tune> {
                     R.layout.list_item, parent, false);
         }
 
-
-
         // Get the {@link Tune} object located at this position in the list
         Tune currentTune = getItem(position);
 
         /*  Title Tune ***********************************/
         // Find the TextView in the list_item.xml layout with the ID version_name
-        TextView titleTextView = (TextView) listItemView.findViewById(R.id.listItemTitle);
+        TextView titleTextView = listItemView.findViewById(R.id.listItemTitle);
         // Get the version name from the current Tune object and set this text on the name TextView
         titleTextView.setText(currentTune.getTuneTitle());
 
 
         /* SUB Title Tune ***********************************/
         // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView subtitleTextView = (TextView) listItemView.findViewById(R.id.listItemSubTitle);
+        TextView subtitleTextView = listItemView.findViewById(R.id.listItemSubTitle);
         // Get the version number from the current Tune object and set this text on the number TextView
         subtitleTextView.setText(currentTune.getTuneSubTitle());
 
 
         /* IMAGE FOR ITEM ***********************************/
         // Find the imageview in list_item.xml
-        ImageView myImageView = (ImageView) listItemView.findViewById(R.id.myImage);
+        ImageView myImageView = listItemView.findViewById(R.id.myImage);
         if (currentTune.hasImage()) {
             // Get the image resource and set it to the image view
             myImageView.setImageResource(currentTune.getItemImage());

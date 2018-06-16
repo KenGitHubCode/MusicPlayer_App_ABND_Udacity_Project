@@ -52,10 +52,7 @@ public class Song {
     public int getItemImage(){return imageResourceID; }
     //checks if there is an image passed in or not
     public boolean hasImage() {
-        if (imageResourceID == -1)
-            return false;
-        else
-            return true;
+        return imageResourceID != -1;
     }
 
 }

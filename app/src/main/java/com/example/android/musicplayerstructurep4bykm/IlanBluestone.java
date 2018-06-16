@@ -30,7 +30,7 @@ public class IlanBluestone extends AppCompatActivity {
             3. Starts Intent
          */
         // Find the View that shows the applicable category
-        ListView ilanBluestoneTextView = (ListView) findViewById(R.id.list);
+        ListView ilanBluestoneTextView = findViewById(R.id.list);
 
         // Set a click listener on that View
         ilanBluestoneTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -60,7 +60,7 @@ public class IlanBluestone extends AppCompatActivity {
 
         //Initialize myListView as the list View from the applicable xml file
         // R.id.list is just the xml id associated with the selection e.g. aboveandbeyond.xml
-        ListView mylistView = (ListView) findViewById(R.id.list);
+        ListView mylistView = findViewById(R.id.list);
 
         //set the adapter for myListView (which is "list" view in the applicable xml) to itemsView using tunes
             // Basically, it combines the top two lines, the

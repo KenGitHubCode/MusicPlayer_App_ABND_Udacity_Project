@@ -52,7 +52,7 @@ public class PlaySong extends AppCompatActivity  {
         SongAdapter itemsAdapter = new SongAdapter(this, tunes, R.color.above_and_beyond);
 
         //Initialize listView as the list View from the applicable xml file
-        ListView mylistView = (ListView) findViewById(R.id.play_song_list);
+        ListView mylistView = findViewById(R.id.play_song_list);
 
         //set the adapter for listView (which is "list" view in the applicable xml) to itemsView using tunes
         mylistView.setAdapter(itemsAdapter);
@@ -61,9 +61,5 @@ public class PlaySong extends AppCompatActivity  {
         for(int index = 0; index < tunes.size(); index++){
             Log.v("PlaySong: ","Value at index " + index + ": " + tunes.get(index));
         }
-        /*Toast toast = Toast.makeText(this, "PlaySong class called here and Title value is: "
-                + newString, Toast.LENGTH_LONG);
-        toast.show();*/
     }
-
 }

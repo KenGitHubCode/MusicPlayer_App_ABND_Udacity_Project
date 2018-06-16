@@ -6,8 +6,7 @@ Developer: Ken Muckey
 Project start date: 6.5.2018
 Project rubric: https://review.udacity.com/#!/rubrics/1134/view
 -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -32,10 +31,11 @@ Project rubric: https://review.udacity.com/#!/rubrics/1134/view
         style="@style/CategoryStyle"
         android:background="@color/ilan_bluestone"
         android:text="@string/ilan_bluestone" />
+
     <ImageView
         android:id="@+id/home_header_img"
         style="@style/HeaderStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/anjuna"/>
+        android:src="@drawable/anjuna" />
 </LinearLayout>

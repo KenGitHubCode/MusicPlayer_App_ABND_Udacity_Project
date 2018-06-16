@@ -34,17 +34,12 @@ public class AboveBeyond extends AppCompatActivity {
             3. Starts Intent
          */
         // Find the View that shows the applicable category
-       final ListView myListView = (ListView) findViewById(R.id.list);
+       final ListView myListView = findViewById(R.id.list);
 
         // Set a click listener on that View
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                //TEST code that can be deleted.  Keep for now as it may be needed for songs...
-                /* Object listItem = myListView.getSelectedItemPosition();
-                Toast.makeText(getApplicationContext(), "selected Item Name is "+listItem.toString() + " postion " + i, Toast.LENGTH_LONG).show();
-                */
 
                 //Creating a Class variable to hold the destination activity depending on Switch below
                 Class myActivityToIntent;
@@ -90,13 +85,11 @@ public class AboveBeyond extends AppCompatActivity {
 
         //Initialize myListView as the list View from the applicable xml file
         // R.id.list is just the xml id associated with the selection e.g. aboveandbeyond.xml
-        ListView mylistView = (ListView) findViewById(R.id.list);
+        ListView mylistView = findViewById(R.id.list);
 
         //set the adapter for myListView (which is "list" view in the applicable xml) to itemsView using tunes
             // Basically, it combines the top two lines, the
         mylistView.setAdapter(itemsAdapter);
-
-                //-------------------------------------------------------
 
         //LOGCAT Loop for values recording
         for(int index = 0; index < tunes.size(); index++){
