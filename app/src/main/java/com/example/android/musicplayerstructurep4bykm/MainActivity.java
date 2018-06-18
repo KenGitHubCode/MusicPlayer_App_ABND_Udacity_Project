@@ -1,8 +1,8 @@
 package com.example.android.musicplayerstructurep4bykm;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link applicable activity}
-                Intent aboveBeyondIntent = new Intent(MainActivity.this, AboveBeyond.class);
+                Intent aboveBeyondIntent = new Intent(MainActivity.this, AboveBeyondActivity.class);
                 // Start the new activity
                 startActivity(aboveBeyondIntent);
             }

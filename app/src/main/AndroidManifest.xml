@@ -19,7 +19,7 @@
 
         //activities DECLARED here per each customer explicit class created:
         <activity
-            android:name=".AboveBeyond"
+            android:name=".AboveBeyondActivity"
             android:label="@string/above_and_beyond"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -43,33 +43,33 @@
         <activity
             android:name=".AlbumCommonGround"
             android:label="@string/above_and_beyond"
-            android:parentActivityName=".AboveBeyond">
+            android:parentActivityName=".AboveBeyondActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AboveBeyond"/>
+                android:value=".AboveBeyondActivity"/>
         </activity>
 
         //activities DECLARED here per each customer explicit class created:
         <activity
             android:name=".AlbumRibbons"
             android:label="@string/above_and_beyond"
-            android:parentActivityName=".AboveBeyond">
+            android:parentActivityName=".AboveBeyondActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AboveBeyond"/>
+                android:value=".AboveBeyondActivity"/>
         </activity>
 
         //activities DECLARED here per each customer explicit class created:
         <activity
             android:name=".AlbumWeNeed"
             android:label="@string/above_and_beyond"
-            android:parentActivityName=".AboveBeyond">
+            android:parentActivityName=".AboveBeyondActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AboveBeyond"/>
+                android:value=".AboveBeyondActivity"/>
         </activity>
 
         //activities DECLARED here per each customer explicit class created:

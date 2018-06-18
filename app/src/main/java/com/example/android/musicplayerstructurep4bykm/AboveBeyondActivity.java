@@ -5,12 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,7 +14,7 @@ import java.util.ArrayList;
  * Created by redne on 6/7/2018.
  */
 
-public class AboveBeyond extends AppCompatActivity {
+public class AboveBeyondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +68,7 @@ public class AboveBeyond extends AppCompatActivity {
         ArrayList<Tune> tunes = new ArrayList<Tune>();
 
         //Add values to the ArrayList Tune for each
-        tunes.add(new Tune("Above and Beyond","Common Ground", R.drawable.common));
+        tunes.add(new Tune(getString(R.string.above_beyond_name),getString(R.string.common_ground_name), R.drawable.common));
         tunes.add(new Tune("Above and Beyond","We're all we need", R.drawable.need));
         tunes.add(new Tune("Above and Beyond","Ribbons", R.drawable.ribbon));
 
